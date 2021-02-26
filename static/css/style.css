@@ -1,0 +1,14 @@
+.footer {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: fit-content;
+}
+
+.footer .content-wrap {
+    text-align: center;
+    line-height: 50px;
+    background-color: rgb(113, 193, 247);
+    color: rgb(244, 246, 248);
+}

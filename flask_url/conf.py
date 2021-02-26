@@ -41,6 +41,7 @@ class FlaskUrlConf:
                             view_func=url.view_func,
                             **url.options
                         )
+                app.register_blueprint(b)
             except ImportError as e:
                 app.logger.warn(f"Import module {mod_path} err {e}")
             except IndexError as e:

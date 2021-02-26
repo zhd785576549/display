@@ -21,7 +21,6 @@ def create_app(import_name):
     }
     env = os.environ.get("PRO_ENV", "DEV")
     f_app.config.from_object(env_dict.get(env, "core.dev_settings"))
-    Bootstrap(app=f_app)
     FlaskUrlConf(app=f_app)
     db.init_app(app=f_app)
     return f_app

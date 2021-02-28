@@ -21,4 +21,8 @@ class ArticlMarkdown:
         return str_content + "..."
 
     def trans_to_html(self):
-        pass
+        html_content = markdown(
+            text=self.__article_content, 
+            extensions=["markdown.extensions.toc", "markdown.extensions.fenced_code", "markdown.extensions.tables"]
+        )
+        return html_content

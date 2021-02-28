@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block Title %} 文章 - {{ article.title }} {% endblock %}
+
+{% block Header %}{% endblock %}
+
+{% block Body %}
+<div class="article-wrap">
+    <h3>{{ article.title }}</h3>
+    <div>{{ article.content | safe }}</div>
+</div>
+{% endblock %}

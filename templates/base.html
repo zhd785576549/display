@@ -17,8 +17,14 @@
         <div class="header">
             <div class="brand">学习展示在线工具</div>
             {% for category in category_list %}
-            {% if loop.index == 1 %}<div class="item first-category">{{ category.name }}</div>
-            {% else %}<div class="item">{{ category.name }}</div>
+            {% if category.id == category_id %}
+            <a class="item-selected" href="javascript:void(0);">
+                <div>{{ category.name }}</div>
+            </a>
+            {% else %}
+            <a class="item" href="{{ url_for('index.index', c_id=category.id, page=1, page_size=20) }}">
+                <div>{{ category.name }}</div>
+            </a>
             {% endif %}
             {% endfor %}
         </div>

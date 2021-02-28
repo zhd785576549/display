@@ -3,7 +3,7 @@ html, body {
     padding: 0px;
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 ul {
@@ -20,9 +20,9 @@ a {
 
 .main-container {
     position: relative;
-    min-height: calc(100% - 60px);
     box-sizing: border-box;
-    padding-bottom: 60px;
+    margin-bottom: 80px;
+    overflow: hidden;
 }
 
 .main-container .header {
@@ -42,10 +42,11 @@ a {
     font-size: 25px;
     font-weight: bold;
     margin-left: 20px;
+    margin-right: 50px;
 }
 
-.main-container .header .first-category {
-    margin-left: 50px;
+.main-container .header a {
+    text-decoration: none;
 }
 
 .main-container .header .item {
@@ -93,12 +94,32 @@ a {
     text-decoration: none;
 }
 
+.main-container .article-wrap {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.main-container .article-wrap ul {
+    list-style: decimal;
+    display: block;
+}
+
+.main-container .article-wrap ol {
+    list-style: disc;
+    display: block;
+}
+
+.main-container .article-wrap ul li,
+.main-container .article-wrap ol li {
+    float: none;
+}
+
 .footer {
-    position: fixed;
+    position: relative;
     width: 100%;
-    height: 60px;
-    bottom: 0px;
-    overflow: hidden;
+    /* height: 60px; */
+    /* bottom: 0px; */
+    /* overflow: hidden; */
 }
 
 .footer .content-wrap {

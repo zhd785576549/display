@@ -1,4 +1,5 @@
 from sqlalchemy import pool
+from datetime import timedelta
 
 
 DEBUG = True
@@ -24,4 +25,6 @@ SQLALCHEMY_BINDS = {
     # 展示平台
     "default": "mysql://root:zhd19871111@localhost:3306/exhibition?charset=utf8mb4",
 }
+
+SEND_FILE_MAX_AGE_DEFAULT = timedelta(seconds=1)
 

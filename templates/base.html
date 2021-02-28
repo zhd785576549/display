@@ -12,9 +12,16 @@
     {% block Style %}{% endblock %}
 </head>
 <body>
-    <div class="main-content">
+    <div class="main-container">
         {% block Header %}
-        <div></div>
+        <div class="header">
+            <div class="brand">学习展示在线工具</div>
+            {% for category in category_list %}
+            {% if loop.index == 1 %}<div class="item first-category">{{ category.name }}</div>
+            {% else %}<div class="item">{{ category.name }}</div>
+            {% endif %}
+            {% endfor %}
+        </div>
         {% endblock %}
         {% block Body %}{% endblock %}
     </div>
@@ -22,6 +29,9 @@
         <div class="content-wrap">
             <p>
                 <a href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow">津ICP备18010263号-1</a>
+            </p>
+            <p>
+                <span>COPYRIGHT © 2021 学习展示在线工具. ALL RIGHTS RESERVED.</span>
             </p>
         </div>
     </div>

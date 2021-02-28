@@ -2,6 +2,7 @@ import os
 from flask_sqlalchemy import SQLAlchemy
 from flask_bootstrap import Bootstrap
 from flask_url.conf import FlaskUrlConf
+from flask_wtf.csrf import CSRFProtect
 from flask import Flask
 
 db = SQLAlchemy()
@@ -23,6 +24,8 @@ def create_app(import_name):
     f_app.config.from_object(env_dict.get(env, "core.dev_settings"))
     FlaskUrlConf(app=f_app)
     db.init_app(app=f_app)
+    CSRFProtect(app=f_app)
+    print(f_app.url_map)
     return f_app
 
 

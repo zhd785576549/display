@@ -4,10 +4,11 @@ from datetime import datetime
 
 
 class Article(db.Model):
-    __tablename__ = "category"
+    __tablename__ = "article"
     __bind_key__ = "default"
 
     id = Column(Integer, primary_key=True, autoincrement=True, info="主键")
+    brief = Column(String(500), nullable=True, info="标题")
     title = Column(String(200), nullable=False, info="标题")
     content = Column(Text, nullable=True, info="内容")
     category_id = Column(Integer, nullable=False, info="分类ID")

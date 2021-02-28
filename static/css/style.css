@@ -1,14 +1,114 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    float: left;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-container {
+    position: relative;
+    min-height: calc(100% - 60px);
+    box-sizing: border-box;
+    padding-bottom: 60px;
+}
+
+.main-container .header {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    display: flex;
+    color: rgb(244, 246, 248);
+    background-color: rgb(83, 179, 243);
+}
+
+.main-container .header div{
+    display: inline;
+}
+
+.main-container .header .brand {
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.main-container .header .first-category {
+    margin-left: 50px;
+}
+
+.main-container .header .item {
+    font-size: 20px;
+    margin-right: 20px;
+    padding: 0px 10px;
+}
+
+.main-container .header .item:hover,
+.main-container .header .item-selected {
+    background-color: #fff;
+    color: rgb(83, 179, 243);
+    cursor: pointer;
+}
+
+.main-container .article-wrap {
+    margin-top: 20px;
+    height: 100%;
+    width: 700px;
+    margin: 0 auto;
+}
+
+.main-container .article-wrap .article-list {
+    position: relative;
+    overflow: hidden;
+}
+
+.main-container .article-wrap .article-list a .article-item {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.main-container .article-wrap .article-list a .article-item .title {
+    font-size: 20px;
+    color: rgb(29, 29, 29);
+}
+
+.main-container .article-wrap .article-list a .article-item .content {
+    font-size: 15px;
+    color: rgb(160, 159, 159);
+}
+
+.main-container .article-wrap .article-list a {
+    text-decoration: none;
+}
+
 .footer {
     position: fixed;
-    bottom: 0px;
-    left: 0px;
     width: 100%;
-    height: fit-content;
+    height: 60px;
+    bottom: 0px;
+    overflow: hidden;
 }
 
 .footer .content-wrap {
     text-align: center;
-    line-height: 50px;
-    background-color: rgb(113, 193, 247);
+    background-color: rgb(83, 179, 243);
+    color: rgb(244, 246, 248);
+    padding: 5px 0px;
+}
+
+.footer .content-wrap p a {
+    text-decoration: none;
     color: rgb(244, 246, 248);
 }

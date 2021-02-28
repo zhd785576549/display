@@ -1,5 +1,28 @@
 {% extends "base.html" %}
 
+{% from "macro.html" import pagination_widget %}
+
 {% block Title %}首页{% endblock %}
 
-{% block  %}
+{% block Body %}
+<div class="article-wrap">
+    <div class="article-list">
+        {% for a in pagination.items %}
+        <a href="{{ url_for('article.page', a_id=a.id) }}">
+            <div class="article-item">
+                <h2 class="title">{{ a.title }}</h2>
+                {% if not brief %}<p class="content">{{ a.brief }}</p>
+                {% else %}<p class="content"></p>
+                {% endif %}
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+
+    {%if pagination %}
+        <div class="pagination">
+            {{ pagination_widget(pagination, '.index') }}
+        </div>
+    {% endif %}
+</div>
+{% endblock %}
